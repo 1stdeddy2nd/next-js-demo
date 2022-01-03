@@ -46,8 +46,7 @@ export const handleSort = (value: string, datas: Array<any>) => {
 };
 
 export const handleFilterBySearch = (value: string, datas: Array<Object>) => {
-  const result = datas.filter((data: Object) =>
+  return datas.filter((data: Object) =>
     JSON.stringify(data).toLowerCase().includes(value.toLowerCase())
   );
-  return result;
 };
