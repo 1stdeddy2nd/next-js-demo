@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.font-small {
+  font-size: 0.75rem;
+}
+
+.all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
