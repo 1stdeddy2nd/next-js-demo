@@ -17,8 +17,10 @@ export default function Home(props: any) {
       sortQuery === ""
     ) {
       router.push("/");
-    } else if (!newValue || newValue === "" || newValue === " ") {
+    } else if ((!newValue || newValue === "" || newValue === " ") && sortQuery !== "") {
       router.push(`/?sort=${sortQuery}`);
+    } else if (sortQuery === "") {
+      router.push(`/?search=${newValue}`)
     } else {
       router.push(`/?search=${newValue}&sort=${sortQuery}`);
     }
